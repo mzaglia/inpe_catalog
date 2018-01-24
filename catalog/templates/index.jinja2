@@ -1,0 +1,82 @@
+{% extends "bootstrap/base.html" %}
+{% block title %}INPE's EO Image Catalog{% endblock %}
+
+{% block navbar %}
+{% endblock %}
+
+{% block styles %}
+{{super()}}
+{% include "styles.jinja2" %}
+{% endblock %}
+
+{% block content %}
+{{super()}}
+<div id="sidebar" class="sidebar collapsed">
+    <!-- Nav tabs -->
+    <div class="sidebar-tabs">
+        <ul role="tablist">
+            <li><a href="#home" role="tab"><i class="fa fa-search"></i></a></li>
+            <li><a href="#download" role="tab"><i class="fa fa-download"></i></a></li>
+        </ul>
+        <ul role="tablist">
+            <li><a href="#settings" role="tab"><i class="fa fa-gear"></i></a></li>
+        </ul>
+    </div>
+    <div class="sidebar-content">
+        <div class="sidebar-pane" id="home">
+            <h1 class="sidebar-header">Catalog search<span class="sidebar-close"><i class="fa fa-caret-left"></i></span></h1>
+            <div class="container-fluid nopadding-left" style="margin-top: 10px">
+                <form role="form" id="searchForm"> 
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div class="form-group">   
+                                <label for="BoundingBox">Bounding Box</label>  
+                                <input class="form-control form-control-sm" type="text" placeholder="West, South , East, North. Eg: -52.23,-25.22,-43.10,-20.58" name="bbox" id="bbox">
+                            </div>  
+                        </div>  
+                        <div class="col-sm-6">
+                            <div class="form-group"> 
+                                <label for="count">Count</label>    
+                                <input class="form-control form-control-sm" type="number" placeholder="10" name="count" id="count">
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label for="startIndex">Start Index</label>    
+                                <input class="form-control form-control-sm" type="number" placeholder="1" name="startIndex" id="startIndex">
+                            </div>
+                        </div> 
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label for="collectionId">Collection ID</label>
+                                <input class="form-control form-control-sm" type="text" placeholder="" name="collectionId" id="collectionId">
+                            </div> 
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <button type="submit" class="btn btn-primary base-color" id="searchSubmit">Search</button>
+                        </div>
+                    </div>
+                </form>
+                <div id="resultList" style="margin-top: 10px"></div>
+            </div>      
+        </div>
+        <div class="sidebar-pane" id="download">
+            <h1 class="sidebar-header">Download<span class="sidebar-close"><i class="fa fa-caret-left"></i></span></h1>
+        </div>
+        <div class="sidebar-pane" id="settings">
+            <h1 class="sidebar-header">Settings<span class="sidebar-close"><i class="fa fa-caret-left"></i></span></h1>
+        </div>
+    </div>
+</div>
+
+
+
+<div id="map" class="sidebar-map"></div>
+{% endblock %}
+
+{% block scripts %}
+{{super()}}
+{% include "scripts.jinja2" %}
+{% endblock %}

@@ -7,30 +7,25 @@
   z-index: 2000; }
   .sidebar.collapsed {
     width: 40px; }
-  @media (min-width: 768px) {
+  @media (min-width: 520px) {
     .sidebar {
       top: 10px;
       bottom: 10px;
       transition: width 500ms; } }
-  @media (min-width: 768px) and (max-width: 991px) {
+  @media (min-width: 520px)  {
     .sidebar {
-      width: 305px; } }
-  @media (min-width: 992px) and (max-width: 1199px) {
-    .sidebar {
-      width: 390px; } }
-  @media (min-width: 1200px) {
-    .sidebar {
-      width: 460px; } }
+      width: 500px; } }
+
 
 .sidebar-left {
   left: 0; }
-  @media (min-width: 768px) {
+  @media (min-width: 520px) {
     .sidebar-left {
       left: 10px; } }
 
 .sidebar-right {
   right: 0; }
-  @media (min-width: 768px) {
+  @media (min-width: 520px) {
     .sidebar-right {
       right: 10px; } }
 
@@ -61,7 +56,7 @@
         background-color: #eee; }
       .sidebar-tabs > li.active, .sidebar-tabs > ul > li.active {
         color: #fff;
-        background-color: #0074d9; }
+        background-color: #3a72bc; }
       .sidebar-tabs > li.disabled, .sidebar-tabs > ul > li.disabled {
         color: rgba(51, 51, 51, 0.4); }
         .sidebar-tabs > li.disabled:hover, .sidebar-tabs > ul > li.disabled:hover {
@@ -100,18 +95,13 @@
   left: 0;
   right: 0;
   box-sizing: border-box;
-  padding: 10px 20px; }
+  padding: 10px 10px; }
   .sidebar-pane.active {
     display: block; }
-  @media (min-width: 768px) and (max-width: 991px) {
+  @media (min-width: 520px)  {
     .sidebar-pane {
-      min-width: 265px; } }
-  @media (min-width: 992px) and (max-width: 1199px) {
-    .sidebar-pane {
-      min-width: 350px; } }
-  @media (min-width: 1200px) {
-    .sidebar-pane {
-      min-width: 420px; } }
+      min-width: 400px; } }
+
 
 .sidebar-header {
   margin: -10px -20px 0;
@@ -120,7 +110,7 @@
   line-height: 40px;
   font-size: 14.4pt;
   color: #fff;
-  background-color: #0074d9; }
+  background-color: #3a72bc; }
   .sidebar-right .sidebar-header {
     padding-left: 40px; }
 
@@ -138,13 +128,13 @@
 
 .sidebar-left ~ .sidebar-map {
   margin-left: 40px; }
-  @media (min-width: 768px) {
+  @media (min-width: 520px) {
     .sidebar-left ~ .sidebar-map {
       margin-left: 0; } }
 
 .sidebar-right ~ .sidebar-map {
   margin-right: 40px; }
-  @media (min-width: 768px) {
+  @media (min-width: 520px) {
     .sidebar-right ~ .sidebar-map {
       margin-right: 0; } }
 
@@ -153,37 +143,29 @@
   .sidebar.leaflet-touch {
     box-shadow: none;
     border-right: 2px solid rgba(0, 0, 0, 0.2); }
-  @media (min-width: 768px) {
+  @media (min-width: 520px) {
     .sidebar {
       border-radius: 4px; }
       .sidebar.leaflet-touch {
         border: 2px solid rgba(0, 0, 0, 0.2); } }
 
-@media (min-width: 768px) {
+@media (min-width: 520px) {
   .sidebar-left ~ .sidebar-map .leaflet-left {
     transition: left 500ms; } }
 
-@media (min-width: 768px) and (max-width: 991px) {
+@media (min-width: 520px)  {
   .sidebar-left ~ .sidebar-map .leaflet-left {
     left: 315px; } }
 
-@media (min-width: 992px) and (max-width: 1199px) {
-  .sidebar-left ~ .sidebar-map .leaflet-left {
-    left: 400px; } }
-
-@media (min-width: 1200px) {
-  .sidebar-left ~ .sidebar-map .leaflet-left {
-    left: 470px; } }
-
-@media (min-width: 768px) {
+@media (min-width: 520px) {
   .sidebar-left.collapsed ~ .sidebar-map .leaflet-left {
     left: 50px; } }
 
-@media (min-width: 768px) {
+@media (min-width: 520px) {
   .sidebar-right ~ .sidebar-map .leaflet-right {
     transition: right 500ms; } }
 
-@media (min-width: 768px) and (max-width: 991px) {
+@media (min-width: 520px) and (max-width: 991px) {
   .sidebar-right ~ .sidebar-map .leaflet-right {
     right: 315px; } }
 
@@ -195,6 +177,6 @@
   .sidebar-right ~ .sidebar-map .leaflet-right {
     right: 470px; } }
 
-@media (min-width: 768px) {
+@media (min-width: 520px) {
   .sidebar-right.collapsed ~ .sidebar-map .leaflet-right {
     right: 50px; } }

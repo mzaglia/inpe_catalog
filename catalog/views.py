@@ -1,10 +1,14 @@
-import logging
+from flask import render_template, abort, request
 from catalog import app
-from flask import render_template, abort
+
+@app.before_request
+def before_request():
+    if 'localhost' in request.host_url or '0.0.0.0' in request.host_url:
+        app.jinja_env.cache = {}
 
 @app.route("/")
 def index():
-    return render_template("index.html")
+    return render_template("index.jinja2")
 
 @app.errorhandler(500)
 def exception_handler(exception):
