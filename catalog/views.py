@@ -1,5 +1,6 @@
 from flask import render_template, abort, request
 from catalog import app
+import os
 
 @app.before_request
 def before_request():
@@ -8,7 +9,7 @@ def before_request():
 
 @app.route("/")
 def index():
-    return render_template("index.jinja2")
+    return render_template("index.jinja2", os_url=os.getenv('OPENSEARCH_URL'))
 
 @app.errorhandler(500)
 def exception_handler(exception):
